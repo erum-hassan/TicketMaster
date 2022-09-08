@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Layout, Space, Button, Input, Typography, Tabs, Icon, Card } from 'antd';
-import { BarChartOutlined, SearchOutlined, FilterOutlined } from '@ant-design/icons'
+import { BarChartOutlined, SearchOutlined, FilterOutlined ,PlusOutlined,AlignCenterOutlined} from '@ant-design/icons'
 import { Bar, PolarArea, Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, CategoryScale, LinearScale, BarElement, RadialLinearScale, ArcElement } from 'chart.js'
 ChartJS.register(
@@ -12,7 +12,6 @@ export default function Dashboard() {
 
 
     const { Header, Footer, Sider, Content } = Layout;
-    const { Search } = Input;
     const { Title } = Typography;
     const { TabPane } = Tabs;
 
@@ -26,8 +25,10 @@ export default function Dashboard() {
             <div>
                 <Layout style={{ height: "150vh" }}>
                     <Sider width={80}>
-                        <Space style={{ marginTop: "100px" }}>
-                            < BarChartOutlined style={{ fontSize: '40px', color: '#FFFFFF' }} />
+                        <Space style={{ marginTop: "100px"  }} direction="vertical">
+                            < BarChartOutlined style={{ fontSize: '40px', color: '#FFFFFF',marginBottom:'20px' }} />
+                            < PlusOutlined  style={{ fontSize: '40px', color: '#FFFFFF',marginBottom:'20px' }} />
+                            < AlignCenterOutlined   style={{ fontSize: '40px', color: '#FFFFFF',marginBottom:'20px' }} />
                         </Space>
                     </Sider>
                     <Layout>
@@ -47,22 +48,22 @@ export default function Dashboard() {
 
                                     </TabPane>
                                     <TabPane tab="Guide" key="3">
-                                        Content of Tab Pane 3
+                                        
                                     </TabPane>
                                     <TabPane tab="Chat" key="4">
-                                        Content of Tab Pane 4
+                                        
                                     </TabPane>
                                     <TabPane tab="Talk" key="5">
-                                        Content of Tab Pane 5
+                                        
                                     </TabPane>
                                     <TabPane tab="Knowledge Base" key="6">
-                                        Content of Tab Pane 6
+                                        
                                     </TabPane>
                                     <TabPane tab="Search" key="7">
-                                        Content of Tab Pane 7
+                                        
                                     </TabPane>
                                     <TabPane tab="Community" key="8">
-                                        Content of Tab Pane 8
+                                       
                                     </TabPane>
                                 </Tabs>
                             </Space>
